@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             x:Class="XamarinForms_FormattedText_Issue.MainPage">
+    <Grid>
+        <Image Grid.Row="0"
+               Source="https://www.scinexx.de/wp-content/uploads/0/1/01-35131-nukliduhr01.jpg"
+               Aspect="AspectFill"/>
+
+        <StackLayout Grid.Row="1"
+                     VerticalOptions="FillAndExpand"
+                     Spacing="0">
+            <Label Text="Header"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="27"
+                   Margin="0,16"/>
+            <Label HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Margin="16,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet: "/>
+                        <Span Text="Deutschland"
+                              TextColor="Orange">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+        <StackLayout Grid.Row="2"
+                     VerticalOptions="EndAndExpand"
+                     Spacing="6" >
+            <Button Text="FirstButton"
+                    TextColor="Black"
+                    BackgroundColor="Orange"
+                    Margin="16,0"
+                    CornerRadius="20"/>
+            <Button Text="SecondButton"
+                    TextColor="Black"
+                    BackgroundColor="Orange"
+                    Margin="16,0"
+                    CornerRadius="20"/>
+            <Button Text="ThirdButton"
+                    TextColor="Black"
+                    BackgroundColor="Orange"
+                    Margin="16,0"
+                    CornerRadius="20"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
